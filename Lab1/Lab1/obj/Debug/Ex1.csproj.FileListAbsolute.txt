@@ -1,0 +1,6 @@
+\\lib16\Students\ФИб-2\ООП\Ощепков Дмитрий\Lab1\Lab1\bin\Debug\Lab1.exe.config
+\\lib16\Students\ФИб-2\ООП\Ощепков Дмитрий\Lab1\Lab1\bin\Debug\Lab1.exe
+\\lib16\Students\ФИб-2\ООП\Ощепков Дмитрий\Lab1\Lab1\bin\Debug\Lab1.pdb
+\\lib16\Students\ФИб-2\ООП\Ощепков Дмитрий\Lab1\Lab1\obj\Debug\Ex1.csproj.CoreCompileInputs.cache
+\\lib16\Students\ФИб-2\ООП\Ощепков Дмитрий\Lab1\Lab1\obj\Debug\Lab1.exe
+\\lib16\Students\ФИб-2\ООП\Ощепков Дмитрий\Lab1\Lab1\obj\Debug\Lab1.pdb
