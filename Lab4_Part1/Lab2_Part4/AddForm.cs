@@ -31,7 +31,6 @@ namespace Lab2_Part4
             MyRecord.House = (ushort)HouseNumericUpDown.Value;
             MyRecord.Flat = (ushort)FlatNumericUpDown.Value;
             Close(); 		// закрываем форму
-
         }
     }
 }
