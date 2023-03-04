@@ -58,6 +58,9 @@ namespace Lab2_Part4
             this.SaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.SearchByNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchByAdressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchByPhoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.HouseNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlatNumericUpDown)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -316,7 +319,10 @@ namespace Lab2_Part4
             // абонентToolStripMenuItem
             // 
             this.абонентToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem});
+            this.добавитьToolStripMenuItem,
+            this.SearchByNameToolStripMenuItem,
+            this.SearchByAdressToolStripMenuItem,
+            this.SearchByPhoneToolStripMenuItem});
             this.абонентToolStripMenuItem.Name = "абонентToolStripMenuItem";
             this.абонентToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.абонентToolStripMenuItem.Text = "Абонент";
@@ -324,7 +330,7 @@ namespace Lab2_Part4
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
             // 
@@ -340,14 +346,14 @@ namespace Lab2_Part4
             // OpenToolStripMenuItem
             // 
             this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
-            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.OpenToolStripMenuItem.Text = "Открыть";
             this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // SaveToolStripMenuItem
             // 
             this.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
-            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.SaveToolStripMenuItem.Text = "Сохранить";
             this.SaveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -359,6 +365,27 @@ namespace Lab2_Part4
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "*.txt | *.xml";
+            // 
+            // SearchByNameToolStripMenuItem
+            // 
+            this.SearchByNameToolStripMenuItem.Name = "SearchByNameToolStripMenuItem";
+            this.SearchByNameToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.SearchByNameToolStripMenuItem.Text = "Поиск по ФИО";
+            this.SearchByNameToolStripMenuItem.Click += new System.EventHandler(this.SearchByNameToolStripMenuItem_Click);
+            // 
+            // SearchByAdressToolStripMenuItem
+            // 
+            this.SearchByAdressToolStripMenuItem.Name = "SearchByAdressToolStripMenuItem";
+            this.SearchByAdressToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.SearchByAdressToolStripMenuItem.Text = "Поиск по адресу";
+            this.SearchByAdressToolStripMenuItem.Click += new System.EventHandler(this.SearchByAdressToolStripMenuItem_Click);
+            // 
+            // SearchByPhoneToolStripMenuItem
+            // 
+            this.SearchByPhoneToolStripMenuItem.Name = "SearchByPhoneToolStripMenuItem";
+            this.SearchByPhoneToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.SearchByPhoneToolStripMenuItem.Text = "Поиск по телефону";
+            this.SearchByPhoneToolStripMenuItem.Click += new System.EventHandler(this.SearchByPhoneToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -430,6 +457,9 @@ namespace Lab2_Part4
         private System.Windows.Forms.ToolStripMenuItem SaveToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem SearchByNameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SearchByAdressToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SearchByPhoneToolStripMenuItem;
     }
 }
 

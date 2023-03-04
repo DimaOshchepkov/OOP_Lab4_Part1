@@ -159,8 +159,10 @@ namespace Lab2_Part4
                 if (fileName.EndsWith(".txt"))
                     {
                     noteReader = new NoteTxtReader();
-                    if (noteReader.Read(fileName, ref PhoneNote))
+                    List<Note> fromFile = noteReader.Read(fileName);
+                    if (fromFile != null)
                     {
+                        PhoneNote = fromFile;
                         // если список пуст, то current устанавливаем в -1,
                         // иначе текущей является первая с начала запись (номер 0)
                         if (PhoneNote.Count == 0) current = -1;
@@ -172,8 +174,10 @@ namespace Lab2_Part4
                 else if (fileName.EndsWith(".xml"))
                 {
                     noteReader = new NoteXmlReader();
-                    if (noteReader.Read(fileName, ref PhoneNote))
+                    List<Note> fromFile = noteReader.Read(fileName);
+                    if (noteReader.Read(fileName) != null)
                     {
+                        PhoneNote = fromFile;
                         if (PhoneNote.Count == 0) current = -1;
                         else current = 0;
                         PrintElement();
@@ -197,6 +201,24 @@ namespace Lab2_Part4
                     e.Cancel = true;
             }
 
+        }
+
+        private void SearchByNameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchNameForm _Search = new SearchNameForm(PhoneNote);
+            _Search.ShowDialog();
+        }
+
+        private void SearchByAdressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchAdressForm _Search = new SearchAdressForm(PhoneNote);
+            _Search.ShowDialog();
+        }
+
+        private void SearchByPhoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchPhoneForm _Search = new SearchPhoneForm(PhoneNote);
+            _Search.ShowDialog();
         }
     }
 }

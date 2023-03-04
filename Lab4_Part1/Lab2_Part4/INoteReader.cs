@@ -17,6 +17,6 @@ namespace Lab2_Part4
         /// <param name="fileName">Full file name</param>
         /// <param name="PhoneNote">List of notes</param>
         /// <returns>True if reading is success else false</returns>
-        bool Read(string fileName, ref List<Note> PhoneNote);
+        List<Note> Read(string fileName);
     }
 }

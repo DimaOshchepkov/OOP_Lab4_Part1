@@ -10,8 +10,9 @@ namespace Lab2_Part4
 {
     class NoteXmlReader : INoteReader
     {
-        bool INoteReader.Read(string fileName, ref List<Note> PhoneNote)
+        List<Note> INoteReader.Read(string fileName)
         {
+            List<Note> PhoneNote = new List<Note>();
             try
             {
                 XmlDocument xDoc = new XmlDocument();
@@ -34,21 +35,12 @@ namespace Lab2_Part4
 
                 }
 
-                return true;
-
-                /*
-                // если список пуст, то current устанавливаем в -1,
-                // иначе текущей является первая с начала запись (номер 0)
-                if (PhoneNote.Count == 0) current = -1;
-                else current = 0;
-                // выводим текущий элемент
-                PrintElement();
-                */
+                return PhoneNote;
             }
             catch (Exception)
             {
                 MessageBox.Show("xml файла не существуе");
-                return false;
+                return null;
             }
         }
     }

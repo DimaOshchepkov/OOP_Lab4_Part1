@@ -11,8 +11,9 @@ namespace Lab2_Part4
 {
     class NoteTxtReader : INoteReader
     {
-        bool INoteReader.Read(string fileName, ref List<Note> PhoneNote)
+        List<Note> INoteReader.Read(string fileName)
         {
+            List<Note> PhoneNote = new List<Note>();
             try         // обработчик исключительных ситуаций
             {
                 // считываем из указанного в диалоговом окне файла
@@ -36,22 +37,14 @@ namespace Lab2_Part4
                         PhoneNote.Add(MyRecord);
                     }
                 }
-                return true;
-                /*
-                // если список пуст, то current устанавливаем в -1,
-                // иначе текущей является первая с начала запись (номер 0)
-                if (PhoneNote.Count == 0) current = -1;
-                else current = 0;
-                // выводим текущий элемент
-                PrintElement();
-                */
+                return PhoneNote;
             }
             catch (Exception ex)    // если произошла ошибка
             {
                 // выводим сообщение об ошибке
                 MessageBox.Show("При открытии файла произошла ошибка: " +
                 ex.Message);
-                return false;
+                return null;
             }
         }
 
